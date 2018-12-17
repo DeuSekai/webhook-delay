@@ -7,8 +7,7 @@ function sendMessage($parameters) {
 $update_response = file_get_contents("php://input");
 $update          = json_decode($update_response, true);
 
-    //4 seconds delay
-    sleep(10);
+    sleep(5);
     sendMessage(array(
             "source" => $update["responseId"],
             "fulfillmentText"=>NULL,
